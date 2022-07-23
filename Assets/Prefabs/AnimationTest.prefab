@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 7939032438418819793}
   - component: {fileID: 7939032438418819792}
   - component: {fileID: 952318586086793379}
+  - component: {fileID: 8631642865183156290}
   m_Layer: 5
   m_Name: AnimationTest
   m_TagString: Untagged
@@ -491,6 +492,27 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &8631642865183156290
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939032438418819795}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 66b7b117192474086b044e9fa9c9b4fb, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -2972547233956177868, guid: 66b7b117192474086b044e9fa9c9b4fb, type: 2}
+    value: {fileID: 4367591087267865298}
+  - key: {fileID: 514328676282896051, guid: 66b7b117192474086b044e9fa9c9b4fb, type: 2}
+    value: {fileID: 6695280472824198003}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &7939032438522918150
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +719,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8051131518551769298}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
