@@ -170,7 +170,7 @@ MonoBehaviour:
   m_cardObj1: {fileID: 670455617}
   m_cardObj2: {fileID: 1543597939}
   m_cardObj3: {fileID: 1375525774}
-  m_initialDeckDefinition: 01000000020000000300000004000000050000000600000007000000
+  m_initialDeckDefinition: 00000000010000000200000003000000040000000800000009000000
 --- !u!4 &546403864
 Transform:
   m_ObjectHideFlags: 0
