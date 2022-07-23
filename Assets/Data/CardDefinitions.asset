@@ -14,98 +14,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_definitions:
   - m_id: 0
-    m_name: First Card
+    m_name: Plus 1 Spark
     m_description: 
     m_effect:
-      Operation: 2
-      Amount: -1
+      Operation: 0
+      Amount: 1
     m_type: 0
     m_image: {fileID: 0}
   - m_id: 1
-    m_name: Other Card
+    m_name: Plus 1 Spark
     m_description: 
     m_effect:
       Operation: 0
       Amount: 1
-    m_type: 0
+    m_type: 2
     m_image: {fileID: 0}
   - m_id: 2
-    m_name: Yet Another Card
+    m_name: Plus 1 Spark
     m_description: 
     m_effect:
       Operation: 0
       Amount: 1
-    m_type: 0
+    m_type: 2
     m_image: {fileID: 0}
   - m_id: 3
-    m_name: CardThree
+    m_name: Plus 3 Spark
     m_description: 
     m_effect:
       Operation: 0
-      Amount: 1
+      Amount: 3
     m_type: 0
     m_image: {fileID: 0}
   - m_id: 4
-    m_name: CardFour
+    m_name: Plus 3 Spark
     m_description: 
     m_effect:
       Operation: 0
-      Amount: 1
-    m_type: 0
+      Amount: 3
+    m_type: 1
     m_image: {fileID: 0}
   - m_id: 5
-    m_name: CardFive
+    m_name: Plus 3 Spark
     m_description: 
     m_effect:
       Operation: 0
-      Amount: 1
-    m_type: 0
+      Amount: 3
+    m_type: 2
     m_image: {fileID: 0}
   - m_id: 6
-    m_name: CardSix
+    m_name: Minus 1 Spark
     m_description: 
     m_effect:
-      Operation: 0
+      Operation: 1
       Amount: 1
     m_type: 0
     m_image: {fileID: 0}
   - m_id: 7
-    m_name: CardSeven
+    m_name: Minus 1 Spark
     m_description: 
     m_effect:
-      Operation: 0
+      Operation: 1
       Amount: 1
-    m_type: 0
+    m_type: 1
     m_image: {fileID: 0}
   - m_id: 8
-    m_name: CardEight
+    m_name: Minus 1 Spark
     m_description: 
     m_effect:
-      Operation: 0
+      Operation: 1
       Amount: 1
-    m_type: 0
+    m_type: 2
     m_image: {fileID: 0}
   - m_id: 9
-    m_name: CardNine
+    m_name: Plus 1 Spark to Scale
     m_description: 
     m_effect:
       Operation: 0
       Amount: 1
-    m_type: 0
+    m_type: 3
     m_image: {fileID: 0}
   - m_id: 10
-    m_name: CardTen
+    m_name: Minus 1 Spark to Scale
     m_description: 
     m_effect:
-      Operation: 0
+      Operation: 1
       Amount: 1
-    m_type: 0
+    m_type: 3
     m_image: {fileID: 0}
   - m_id: 11
-    m_name: Megatron
+    m_name: Flip Scale
     m_description: 
     m_effect:
-      Operation: 0
+      Operation: 2
       Amount: 1
-    m_type: 0
+    m_type: 3
     m_image: {fileID: 0}
