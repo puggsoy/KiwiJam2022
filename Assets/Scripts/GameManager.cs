@@ -4,18 +4,32 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-	private static GameManager m_instance = null;
-	public static GameManager Instance => m_instance;
+	private int HAND_SIZE = 3;
+
+	private static GameManager s_instance = null;
+	public static GameManager Instance => s_instance;
 
 	[SerializeField]
 	private CardDefinitions m_cardDefinitions = null;
 	public CardDefinitions CardDefinitions => m_cardDefinitions;
 
 	[SerializeField]
+	private Text m_deckDescription = null;
+
+	[SerializeField]
 	private Text m_handDescription = null;
 
 	[SerializeField]
-	private Text m_deckDescription = null;
+	private Text m_discardDescription = null;
+
+	[SerializeField]
+	private CardGameObject m_cardObj1 = null;
+
+	[SerializeField]
+	private CardGameObject m_cardObj2 = null;
+
+	[SerializeField]
+	private CardGameObject m_cardObj3 = null;
 
 	[Space]
 	[SerializeField]
@@ -27,11 +41,13 @@ public class GameManager : MonoBehaviour
 
 	private List<Card> m_hand = null;
 
+	private DiscardPile m_discardPile = null;
+
 	//========================================
 
 	private void Awake()
 	{
-		m_instance = this;
+		s_instance = this;
 	}
 
 	private void Start()
@@ -40,14 +56,59 @@ public class GameManager : MonoBehaviour
 
 		m_deck = new Deck(m_currentDeckDefinition);
 		m_deck.Shuffle();
-
 		m_hand = new List<Card>();
-		m_hand.Add(m_deck.Draw());
-		m_hand.Add(m_deck.Draw());
-		m_hand.Add(m_deck.Draw());
+		m_discardPile = new DiscardPile();
 
-		m_deckDescription.text = string.Format("Deck Size: {0}\nIDs: {1}", m_deck.Size.ToString(), m_deck.PrintIDs());
-		m_handDescription.text = string.Format("Hand Size: {0}\nIDs: {1}", m_hand.Count.ToString(), PrintHandIDs());
+		RefillHand();
+
+		Refresh();
+	}
+
+	public void Refresh()
+	{
+		m_deckDescription.text = string.Format("Deck Cards: {0}", m_deck.PrintIDs());
+		m_handDescription.text = string.Format("Hand Size: {0}", m_hand.Count.ToString());
+		m_discardDescription.text = string.Format("Discarded Cards: {0}", m_discardPile.PrintIDs());
+
+		m_cardObj1.Init(m_hand[0]);
+		m_cardObj2.Init(m_hand[1]);
+		m_cardObj3.Init(m_hand[2]);
+	}
+
+	public void SubmitCard(int cardId)
+	{
+		Card card = m_hand.Find(x => x.ID == cardId);
+
+		// use card lol
+
+		m_hand.Remove(card);
+
+		if (m_deck.Size + m_discardPile.Size + m_hand.Count <= 3)
+		{
+			m_discardPile.RefillDeck(m_deck);
+			m_hand.Add(m_deck.Draw());
+		}
+		else
+		{
+			m_discardPile.Discard(m_hand);
+
+			RefillHand();
+		}
+
+		Refresh();
+	}
+
+	private void RefillHand()
+	{
+		for (int i = 0; i < HAND_SIZE; i++)
+		{
+			if (m_deck.Size == 0)
+			{
+				m_discardPile.RefillDeck(m_deck);
+			}
+
+			m_hand.Add(m_deck.Draw());
+		}
 	}
 
 	private string PrintHandIDs()

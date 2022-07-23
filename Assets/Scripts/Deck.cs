@@ -24,6 +24,12 @@ public class Deck
 		}
 	}
 
+	public void Refill(List<Card> cards)
+	{
+		m_cards.AddRange(cards);
+		Shuffle();
+	}
+
 	public void Shuffle()
 	{
 		for (int i = 0; i < m_cards.Count - 1; i++)
