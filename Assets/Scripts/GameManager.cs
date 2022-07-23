@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour
 	{
 		Card card = m_hand.Find(x => x.ID == cardId);
 
-		// use card lol
+		ResolveCard(card);
 
 		m_hand.Remove(card);
 
@@ -113,6 +113,27 @@ public class GameManager : MonoBehaviour
 
 			m_hand.Add(m_deck.Draw());
 		}
+	}
+
+	private void ResolveCard(Card card)
+	{
+		CardEffect effect = card.Definition.Effect;
+		int newLevel = m_sparkBar.Currentlevel;
+
+		switch (effect.Operation)
+		{
+			case CardEffect.OperationType.Add:
+				newLevel += effect.Amount;
+				break;
+			case CardEffect.OperationType.Subtract:
+				newLevel -= effect.Amount;
+				break;
+			case CardEffect.OperationType.Multiply:
+				newLevel *= effect.Amount;
+				break;
+		}
+
+		m_sparkBar.SetLevel(newLevel);
 	}
 
 	private string PrintHandIDs()

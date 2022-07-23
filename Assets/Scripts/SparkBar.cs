@@ -6,7 +6,8 @@ public class SparkBar : MonoBehaviour
 	[SerializeField]
 	private List<SparkSegment> m_segments = null;
 
-	private int currentLevel = 0;
+	private int m_currentLevel = 0;
+	public int Currentlevel => m_currentLevel;
 
 	//========================================
 
@@ -17,15 +18,21 @@ public class SparkBar : MonoBehaviour
 
 	public void SetLevel(int level)
 	{
-		if (currentLevel == level)
+		if (level > 5)
+			level = 5;
+
+		if (level < -5) // Do something special here
+			level = -5;
+
+		if (m_currentLevel == level)
 			return;
 
-		int oldSegmentIndex = 5 - (currentLevel);
+		int oldSegmentIndex = 5 - (m_currentLevel);
 		m_segments[oldSegmentIndex].Deselect();
 
 		int segmentIndex = 5 - (level);
 		m_segments[segmentIndex].Select();
 
-		currentLevel = level;
+		m_currentLevel = level;
 	}
 }
