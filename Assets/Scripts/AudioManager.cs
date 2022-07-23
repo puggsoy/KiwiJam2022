@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-   // Allows music Control to be accessed everywhere using "AudioManager.AM".
+
     public static AudioManager AM
     {
         get
@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     FMOD.Studio.EventInstance musicEV;
     private static AudioManager s_instance;
 
-    // Makes the music start and not destroy on load
+    
 
     void Awake()
     {
@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         else if (AM != this)
         {
             Destroy(gameObject);
+            Debug.Log("AN AUDIO MANAGER WAS FUCKING KILLED");
         }
     }
 
