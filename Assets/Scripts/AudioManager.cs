@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-
+    // Allows music Control to be accessed everywhere using "AudioManager.AM".
     public static AudioManager AM
     {
         get
@@ -21,12 +21,18 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private string MusicTransitionParameterName = "MusicTransition";
     [SerializeField] [FMODUnity.EventRef] string music = "event:/Music";
 
+    [Header("Atmos Settings")]
+    [SerializeField] private string AtmosTransitionParameterName = "AtmosTransition";
+    [SerializeField] [FMODUnity.EventRef] string atmos = "event:/Atmos";
+
     [Header("Button Audio Events")]
     [SerializeField] [FMODUnity.EventRef] string ButtonSelect = "event:/ButtonSelect";   
     [SerializeField] [FMODUnity.EventRef] string ButtonAccept = "event:/ButtonAccept";   
     //[SerializeField] [FMODUnity.EventRef] string ButtonDecline = "event:/ButtonDecline";  
     
     FMOD.Studio.EventInstance musicEV;
+    FMOD.Studio.EventInstance atmosEV;
+
     private static AudioManager s_instance;
 
     
@@ -48,7 +54,8 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
         musicEV = FMODUnity.RuntimeManager.CreateInstance(music);
-        musicEV.start();
+        atmosEV = FMODUnity.RuntimeManager.CreateInstance(atmos);
+        atmosEV.start();
     }
 
     public void SetMusicTransition(float transitionValue)
@@ -70,6 +77,16 @@ public class AudioManager : MonoBehaviour
     //public void PlayDeclineSound() 
     //{
     //    FMODUnity.RuntimeManager.PlayOneShot(ButtonDecline);
+    //}
+
+    public void StartMusic()
+    {
+        musicEV.start();
+    }
+
+    //public void AtmosTransition()
+    //{
+    //    musicEV.start();
     //}
 
 }
