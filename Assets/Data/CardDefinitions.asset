@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a26d14f325c653247b415029e57746cf, type: 3}
+  m_Name: CardDefinitions
+  m_EditorClassIdentifier: 
+  m_definitions:
+  - m_id: 0
+    m_name: First Card
+  - m_id: 1
+    m_name: Other Card
+  - m_id: 2
+    m_name: Yet Another Card
+  - m_id: 3
+    m_name: CardThree
+  - m_id: 4
+    m_name: CardFour
+  - m_id: 5
+    m_name: CardFive
+  - m_id: 6
+    m_name: CardSix
+  - m_id: 7
+    m_name: CardSeven
+  - m_id: 8
+    m_name: CardEight
+  - m_id: 9
+    m_name: CardNine
+  - m_id: 10
+    m_name: CardTen
+  - m_id: 11
+    m_name: Megatron
