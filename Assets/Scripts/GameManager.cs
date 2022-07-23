@@ -31,6 +31,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private CardGameObject m_cardObj3 = null;
 
+	[SerializeField]
+	private SparkBar m_sparkBar = null;
+
 	[Space]
 	[SerializeField]
 	private List<int> m_initialDeckDefinition = null;
@@ -58,6 +61,7 @@ public class GameManager : MonoBehaviour
 		m_deck.Shuffle();
 		m_hand = new List<Card>();
 		m_discardPile = new DiscardPile();
+		m_sparkBar.Init();
 
 		RefillHand();
 
