@@ -93,8 +93,8 @@ public class GameManager : MonoBehaviour
 
 	public void Refresh()
 	{
-		m_deckDescription.text = string.Format("Deck Cards: {0}", m_deck.PrintIDs());
-		m_discardDescription.text = string.Format("Discarded Cards: {0}", m_discardPile.PrintIDs());
+		m_deckDescription.text = string.Format("{0}", m_deck.Size);
+		m_discardDescription.text = string.Format("{0}", m_discardPile.Size);
 
 		m_cardObj1.Init(m_hand[0]);
 		m_cardObj2.Init(m_hand[1]);
