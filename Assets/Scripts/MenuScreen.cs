@@ -8,15 +8,16 @@ public class MenuScreen : MonoBehaviour
 	[SerializeField]
 	private GameObject m_intructionsPrefab = null;
 
-    public void OnStartClick()
-    {
-        Invoke("StartGame", 0.4f);
-    }
+    //public void OnStartClick()
+    //{
+    //    Invoke("StartGame", 0.4f);
+    //}
 
-    private void StartGame()
-	{
-		SceneManager.LoadScene("GameScene");
-	}
+
+    //public void StartGame()
+	//{
+	//	SceneManager.LoadScene("GameScene");
+	//}
 
     public void OnExitClick()
 	{
