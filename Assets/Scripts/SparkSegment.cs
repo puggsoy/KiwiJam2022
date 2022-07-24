@@ -5,17 +5,21 @@ using UnityEngine.UI;
 public class SparkSegment : MonoBehaviour
 {
 	[SerializeField]
-	private Image m_image = null;
+	private GameObject m_onObject = null;
+	[SerializeField]
+	private GameObject m_offObject = null;
 
 	//========================================
 
 	public void Select()
 	{
-		m_image.color = Color.green;
+		m_onObject.SetActive(true);
+		m_offObject.SetActive(false);
 	}
 
 	public void Deselect()
 	{
-		m_image.color = Color.white;
+		m_offObject.SetActive(true);
+		m_onObject.SetActive(false);
 	}
 }
