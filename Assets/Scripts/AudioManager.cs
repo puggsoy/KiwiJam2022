@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FMOD.Studio;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -98,5 +100,10 @@ public class AudioManager : MonoBehaviour
     //{
     //    musicEV.start();
     //}
+
+    public void StopMusic()
+    {
+        musicEV.stop(STOP_MODE.ALLOWFADEOUT);
+    }
 
 }

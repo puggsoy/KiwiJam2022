@@ -210,6 +210,7 @@ public class GameManager : MonoBehaviour
 
 	private void Fail()
 	{
+		AudioManager.AM.StopMusic();
 		SceneManager.LoadScene("MenuScene");
 	}
 
