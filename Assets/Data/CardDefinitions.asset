@@ -15,7 +15,7 @@ MonoBehaviour:
   m_definitions:
   - m_id: 0
     m_name: Plus 1 Spark
-    m_description: 
+    m_description: Why did the robot go back to school? He was a bit rusty.
     m_effect:
       Operation: 0
       Amount: 1
@@ -23,15 +23,16 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 1
     m_name: Plus 1 Spark
-    m_description: 
+    m_description: You look so cool. Like a portable mini fridge, but full size.
+      Not mini.
     m_effect:
       Operation: 0
       Amount: 1
-    m_type: 2
+    m_type: 1
     m_image: {fileID: 0}
   - m_id: 2
     m_name: Plus 1 Spark
-    m_description: 
+    m_description: Sorry. What was your name again?
     m_effect:
       Operation: 0
       Amount: 1
@@ -39,7 +40,8 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 3
     m_name: Plus 3 Spark
-    m_description: 
+    m_description: Do you know what the best feature of my car is? It comes with
+      a driver.
     m_effect:
       Operation: 0
       Amount: 3
@@ -47,7 +49,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 4
     m_name: Plus 3 Spark
-    m_description: 
+    m_description: See that?
     m_effect:
       Operation: 0
       Amount: 3
@@ -55,7 +57,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 5
     m_name: Plus 3 Spark
-    m_description: 
+    m_description: ... moving back to what I was saying.
     m_effect:
       Operation: 0
       Amount: 3
@@ -63,7 +65,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 6
     m_name: Minus 1 Spark
-    m_description: 
+    m_description: Do you like magic tricks? Here, pick a card!
     m_effect:
       Operation: 1
       Amount: 1
@@ -71,7 +73,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 7
     m_name: Minus 1 Spark
-    m_description: 
+    m_description: Want to go to dancing at Chez Sami? Let's try it out later on.
     m_effect:
       Operation: 1
       Amount: 1
@@ -79,7 +81,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 8
     m_name: Minus 1 Spark
-    m_description: 
+    m_description: Just a minute my dear, I've got to take this call.
     m_effect:
       Operation: 1
       Amount: 1
@@ -87,7 +89,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 9
     m_name: Plus 1 Spark to Scale
-    m_description: 
+    m_description: Wanna see my cute doggy? Yes, you do.
     m_effect:
       Operation: 0
       Amount: 1
@@ -95,7 +97,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 10
     m_name: Minus 1 Spark to Scale
-    m_description: 
+    m_description: I've got to wee. I'll be back.
     m_effect:
       Operation: 1
       Amount: 1
@@ -103,7 +105,7 @@ MonoBehaviour:
     m_image: {fileID: 0}
   - m_id: 11
     m_name: Flip Scale
-    m_description: 
+    m_description: I'd like you to meet my dad, Lionel.
     m_effect:
       Operation: 2
       Amount: 1

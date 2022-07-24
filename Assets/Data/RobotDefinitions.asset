@@ -20,21 +20,30 @@ MonoBehaviour:
       m_circleAddValue: 1
       m_squareMultiplicationValue: -1
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - This is such a nice place, good choice.
+      - My food is cooked to perfection, how's yours?
+      - This one time, I got stuck in an elevator and...
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -1
       m_circleMultiplicationValue: 1
       m_circleAddValue: 2
       m_squareMultiplicationValue: -2
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - Have you ever jumped out of a plane??
+      - I've been to France, it's magical.
+      - I've been to Dunedin, it's breathtaking.
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: 1
       m_circleMultiplicationValue: 1
       m_circleAddValue: -3
       m_squareMultiplicationValue: -3
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - That's not a big family. My friend has 9 uncles and 7 aunts.
+      - I wish I could grow a mustache.
+      - Another drink? I could surely use one.
   - m_moods:
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -1
@@ -42,21 +51,34 @@ MonoBehaviour:
       m_circleAddValue: -1
       m_squareMultiplicationValue: -1
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - The weather in this town is awful, don't you think?
+      - Sometimes, I think there are just too many shows on the TV.
+      - My mom is always asking when I'm gonna move out.
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -1
       m_circleMultiplicationValue: 1
       m_circleAddValue: -1
       m_squareMultiplicationValue: -2
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - And then she said, "do you want some fries with that?" I just can't, you
+        know.
+      - Did I tell you about my neighbours' dog?
+      - Should I or shouldn't I? I can never decide whether to walk home or take
+        the bus.
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -3
       m_circleMultiplicationValue: 1
       m_circleAddValue: -3
       m_squareMultiplicationValue: -3
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - 'Never have I ever: been on a boat.'
+      - I read online that you can't catch rabbies twice. I'm thinking of getting
+        it, just so I can't get it again.
+      - Have you heard the news today? I'm so sad about the changes the new government
+        wants to make.
   - m_moods:
     - m_triangleMultiplicationValue: 3
       m_triangleAddValue: 0
@@ -64,18 +86,28 @@ MonoBehaviour:
       m_circleAddValue: 0
       m_squareMultiplicationValue: -3
       m_squareAddValue: 0
-      m_descriptions: []
+      m_descriptions:
+      - I love fast cars. What do you drive?
+      - Shots? That's what I'm talking about.
+      - 46. That's how many countries I've visited. And you?
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -2
       m_circleMultiplicationValue: 1
       m_circleAddValue: -3
       m_squareMultiplicationValue: 1
       m_squareAddValue: -2
-      m_descriptions: []
+      m_descriptions:
+      - Come on, spill the beans. Who was your first crush?
+      - What kind of band never plays music?
+      - Would you rather be John Travolta in Nicolas Cage's body or Nic Cage in Travolta's
+        body?
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -2
       m_circleMultiplicationValue: 1
       m_circleAddValue: -2
       m_squareMultiplicationValue: 1
       m_squareAddValue: -1
-      m_descriptions: []
+      m_descriptions:
+      - Yes, I love sports. What's your favourite team?
+      - Are there more doors or wheels in the world?
+      - I'm afraid that's a secret. I'll share it if you share one first.
