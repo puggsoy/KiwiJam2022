@@ -214,18 +214,21 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2de109686d3424839b0419129c3fb185, type: 3}
-    m_FontSize: 66
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 109
+    m_MinSize: 0
+    m_MaxSize: 260
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: That sucked!
+  m_Text: 'Maybe you weren''t meant for each other.
+
+    Maybe it''s not you, it''s
+    them.'
 --- !u!1 &3148405967317297393
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,8 +372,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 62
+    m_Font: {fileID: 12800000, guid: 2de109686d3424839b0419129c3fb185, type: 3}
+    m_FontSize: 44
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -381,7 +384,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Continue
+  m_Text: Polish your game with another practice date?
 --- !u!1 &4684742588329823146
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,10 +453,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2de109686d3424839b0419129c3fb185, type: 3}
-    m_FontSize: 66
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 109
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -461,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What a great date!
+  m_Text: What a great practice date! You are doing so good!
 --- !u!1 &5026948150740796994
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,10 +533,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 2de109686d3424839b0419129c3fb185, type: 3}
-    m_FontSize: 66
+    m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 109
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -541,7 +544,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: What a perfect date!
+  m_Text: Congratulations, you had a perfect date!
 --- !u!1 &5820834727907223589
 GameObject:
   m_ObjectHideFlags: 0
