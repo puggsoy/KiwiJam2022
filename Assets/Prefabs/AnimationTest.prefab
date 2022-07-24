@@ -148,7 +148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1025959131453252553
 RectTransform:
   m_ObjectHideFlags: 0
@@ -975,7 +975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7920118312752208473
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1408,6 +1408,7 @@ GameObject:
   - component: {fileID: 8631642865183156290}
   - component: {fileID: 5596606175792397233}
   - component: {fileID: 32220692014942153}
+  - component: {fileID: 897822587053866381}
   m_Layer: 5
   m_Name: AnimationTest
   m_TagString: Untagged
@@ -1555,12 +1556,27 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 8123e4a4bc7dc4317bcb84dcf88f103c, type: 2}
+    - {fileID: 11400000, guid: b479d88e79c0740149c3238e3f553a20, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 32220692014942153}
           m_TargetAssemblyTypeName: TimelineAudioBridge, Assembly-CSharp
           m_MethodName: StartMusic
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 897822587053866381}
+          m_TargetAssemblyTypeName: ROBOTDANCEPARTY, Assembly-CSharp
+          m_MethodName: DanceTime
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1582,6 +1598,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae98ace17d9049d09216042d990f904, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &897822587053866381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7939032438418819795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e62e2daeb40f64010a85462876e1f669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_cutsceneBot: {fileID: 983343440195627493}
+  m_gameBot: {fileID: 1829764563963233413}
 --- !u!1 &7939032439238542463
 GameObject:
   m_ObjectHideFlags: 0
