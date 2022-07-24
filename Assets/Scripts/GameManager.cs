@@ -46,6 +46,10 @@ public class GameManager : MonoBehaviour
 
 	private DiscardPile m_discardPile = null;
 
+	[Space]
+	[SerializeField]
+	private GameObject m_cardCanvas = null;
+
 	//========================================
 
 	private void Awake()
@@ -63,7 +67,12 @@ public class GameManager : MonoBehaviour
 		m_discardPile = new DiscardPile();
 		m_sparkBar.Init();
 
-		RefillHand();
+		RefillHand();	
+	}
+
+	public void EnableGame()
+	{
+		m_cardCanvas.SetActive(true);
 
 		Refresh();
 	}

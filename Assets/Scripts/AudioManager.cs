@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] [FMODUnity.EventRef] string music = "event:/Music";
 
     [Header("Atmos Settings")]
-    [SerializeField] private string AtmosTransitionParameterName = "AtmosTransition";
+    //[SerializeField] private string AtmosTransitionParameterName = "AtmosTransition";
     [SerializeField] [FMODUnity.EventRef] string atmos = "event:/Atmos";
 
     [Header("Button Audio Events")]
