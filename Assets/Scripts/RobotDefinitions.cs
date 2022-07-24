@@ -15,7 +15,19 @@ public class RobotDefinition
 {
 	[SerializeField]
 	private List<RobotMood> m_moods = null;
-	public List<RobotMood> Moods => m_moods;
+
+	private int m_currentMoodIndex = 0;
+	public RobotMood CurrentMood => m_moods[m_currentMoodIndex];
+
+	//========================================
+
+	public void CycleMood()
+	{
+		m_currentMoodIndex++;
+
+		if (m_currentMoodIndex >= m_moods.Count)
+			m_currentMoodIndex = 0;
+	}
 }
 
 [Serializable]

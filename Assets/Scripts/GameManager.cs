@@ -10,8 +10,14 @@ public class GameManager : MonoBehaviour
 	public static GameManager Instance => s_instance;
 
 	[SerializeField]
+	private GameObject m_cardCanvas = null;
+
+	[SerializeField]
 	private CardDefinitions m_cardDefinitions = null;
 	public CardDefinitions CardDefinitions => m_cardDefinitions;
+
+	[SerializeField]
+	private RobotDefinitions m_robotDefinitions = null;
 
 	[SerializeField]
 	private Text m_deckDescription = null;
@@ -34,6 +40,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private SparkBar m_sparkBar = null;
 
+	[SerializeField]
+	private MoodsDisplay m_moodDisplay = null;
+
 	[Space]
 	[SerializeField]
 	private List<int> m_initialDeckDefinition = null;
@@ -46,9 +55,7 @@ public class GameManager : MonoBehaviour
 
 	private DiscardPile m_discardPile = null;
 
-	[Space]
-	[SerializeField]
-	private GameObject m_cardCanvas = null;
+	private RobotDefinition m_currentRobot = null;
 
 	//========================================
 
@@ -60,6 +67,7 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		m_currentDeckDefinition = m_initialDeckDefinition;
+		m_currentRobot = m_robotDefinitions.Definitions[0];
 
 		m_deck = new Deck(m_currentDeckDefinition);
 		m_deck.Shuffle();
@@ -67,7 +75,8 @@ public class GameManager : MonoBehaviour
 		m_discardPile = new DiscardPile();
 		m_sparkBar.Init();
 
-		RefillHand();	
+
+		RefillHand();
 	}
 
 	public void EnableGame()
@@ -86,6 +95,8 @@ public class GameManager : MonoBehaviour
 		m_cardObj1.Init(m_hand[0]);
 		m_cardObj2.Init(m_hand[1]);
 		m_cardObj3.Init(m_hand[2]);
+
+		m_moodDisplay.SetMood(m_currentRobot.CurrentMood);
 	}
 
 	public void SubmitCard(int cardId)
@@ -108,6 +119,8 @@ public class GameManager : MonoBehaviour
 			RefillHand();
 		}
 
+		m_currentRobot.CycleMood();
+
 		Refresh();
 	}
 
@@ -127,18 +140,42 @@ public class GameManager : MonoBehaviour
 	private void ResolveCard(Card card)
 	{
 		CardEffect effect = card.Definition.Effect;
+		RobotMood mood = m_currentRobot.CurrentMood;
 		int newLevel = m_sparkBar.Currentlevel;
+
+		int amount = effect.Amount;
+		
+		switch (card.Definition.Type)
+		{
+			case CardDefinition.CardType.Triangle:
+				amount *= mood.TriangleMultiplicationValue;
+				amount += mood.TriangleAddValue;
+				break;
+			case CardDefinition.CardType.Circle:
+				amount *= mood.CircleMultiplicationValue;
+				amount += mood.CircleAddValue;
+				break;
+			case CardDefinition.CardType.Square:
+				amount *= mood.SquareMultiplicationValue;
+				amount += mood.SquareAddValue;
+				break;
+		}
 
 		switch (effect.Operation)
 		{
 			case CardEffect.OperationType.Add:
-				newLevel += effect.Amount;
+				newLevel += amount;
 				break;
 			case CardEffect.OperationType.Subtract:
-				newLevel -= effect.Amount;
+				newLevel -= amount;
 				break;
 			case CardEffect.OperationType.Multiply:
-				newLevel *= effect.Amount;
+				if (card.Definition.Type != CardDefinition.CardType.None)
+				{
+					Debug.LogWarning("Multiplying with a colored card! Expect weird behaviour!");
+				}
+
+				newLevel *= amount;
 				break;
 		}
 
