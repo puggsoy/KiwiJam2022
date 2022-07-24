@@ -35,7 +35,7 @@ public class AudioManager : MonoBehaviour
 
     private static AudioManager s_instance;
 
-    
+    private int m_managerDeathCount = 0;
 
     void Awake()
     {
@@ -47,7 +47,17 @@ public class AudioManager : MonoBehaviour
         else if (AM != this)
         {
             Destroy(gameObject);
-            Debug.Log("AN AUDIO MANAGER WAS FUCKING KILLED");
+
+            m_managerDeathCount ++;
+
+            if (m_managerDeathCount == 1)
+            {
+                Debug.Log("AN AUDIO MANAGER WAS FUCKING KILLED HOLY SHIT 1 AUDIO MANAGER HAS BEEN FUCKING KILLED SO FAR");
+            }
+            else
+            {
+                Debug.Log("AN AUDIO MANAGER WAS FUCKING KILLED HOLY SHIT " + m_managerDeathCount + " AUDIO MANAGERS HAVE BEEN FUCKING KILLED SO FAR");
+            }
         }
     }
 
