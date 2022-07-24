@@ -11,7 +11,12 @@ public class MoodSection : MonoBehaviour
 
 	public void SetEffect(int multiplyValue, int addValue)
 	{
-		string effectString = $"x{multiplyValue}";
+		string effectString = "×";
+
+		if (multiplyValue < 0)
+			effectString += $"({multiplyValue})";
+		else
+			effectString += $"{multiplyValue}";
 
 		if (addValue < 0)
 			effectString += $" - {Mathf.Abs(addValue)}";
