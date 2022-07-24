@@ -60,7 +60,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -143,26 +143,37 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Thank you for purchasing the to.get.her Bot.\nto.fet.her will help you
-    practice for your date.\nFeel the heat of the moment with our patented Spark-O-Meter\u2122
-    technology.\nIt helps you understand how well the date is going. You can impact
-    the Spark-O-Meter\u2122 with your conversation.\nFirst dates always start at
-    0 spark.\nEnd a good date with 4 spark.\nEnd a perfect date with 5 spark.\nFocus
-    testing leads us to believe that ending your date anywhere else on the Spark-O-Meter\u2122
-    is a good indicator that there won't be a second date.\nIn the unlikely event
-    that the Spark-O-Meter\u2122 drops below the heart break zone of -5, the date
-    is probably over. Further testing is necessary. If this happens to you, let us
-    know how you feel by filling in this survey.\n\n\n\n\n"
+  m_text: "Thank you for purchasing the to.get.her bot, from NASA.\n\nto.get.her
+    will help you practice for your date.\nPanel testing has revealed that the average
+    human has 7 opportunities to make their mark on a date.\n\nSo prepare your moves
+    and remember that you can only use each move once through the course of the date.\n\nOur
+    science backs the theory that the key to understanding other people is to see
+    things from their point of view.\nYour interactions are perceived by your date
+    through the lens of their mood and the To.Get.Her.Bot displays their mood to
+    help you with get accustomed to this.\nIn practice, the impact of the CARDS you
+    play are modified by the MOOD*, before being applied to the Spark-O-Meter\u2122.\n\nIn
+    2022, our researchers made a giant breakthrough: First impressions matter throughout
+    the duration of a date!\nOur newest To.Get.Her.Bot. teaches the importance of
+    a first impression by repeating the first MOOD as the final MOOD. Train yourself
+    to close your date with a strong final move that calls back to the first mood
+    your date felt.\n\nYou can't read a book by its cover. That's why our researchers
+    have programmed all types of personalities into to.get.her bot.\nEvery time you
+    have a good or perfect date, a new date will be prepared for you to practice
+    with.\nGood luck making yourself attractive to everyone!\n\nAs you complete practice
+    dates, you will learn more about yourself.\nFeel free to change your game by
+    replacing one of your interactions with another in between dates. Or, stay true
+    to yourself by making the best use of your limited moves.\n\n\n\n*Some cards
+    ignore moods and directly affect the spark between you and your date."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9017ac335ff22436ebe8527e3d35274d, type: 2}
-  m_sharedMaterial: {fileID: -211075210591155964, guid: 9017ac335ff22436ebe8527e3d35274d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5ff0da3cda8104b28b8a8ae23792c6ab, type: 2}
+  m_sharedMaterial: {fileID: 5438345244471179306, guid: 5ff0da3cda8104b28b8a8ae23792c6ab, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -179,8 +190,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
