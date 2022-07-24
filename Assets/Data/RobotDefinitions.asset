@@ -56,11 +56,11 @@ MonoBehaviour:
       - Sometimes, I think there are just too many shows on the TV.
       - My mom is always asking when I'm gonna move out.
     - m_triangleMultiplicationValue: 1
-      m_triangleAddValue: -1
-      m_circleMultiplicationValue: 1
-      m_circleAddValue: -1
+      m_triangleAddValue: 1
+      m_circleMultiplicationValue: 2
+      m_circleAddValue: -2
       m_squareMultiplicationValue: -2
-      m_squareAddValue: 0
+      m_squareAddValue: 2
       m_descriptions:
       - And then she said, "do you want some fries with that?" I just can't, you
         know.
@@ -69,10 +69,10 @@ MonoBehaviour:
         the bus.
     - m_triangleMultiplicationValue: 1
       m_triangleAddValue: -3
-      m_circleMultiplicationValue: 1
+      m_circleMultiplicationValue: 2
       m_circleAddValue: -3
-      m_squareMultiplicationValue: -3
-      m_squareAddValue: 0
+      m_squareMultiplicationValue: -1
+      m_squareAddValue: 2
       m_descriptions:
       - 'Never have I ever: been on a boat.'
       - I read online that you can't catch rabbies twice. I'm thinking of getting
