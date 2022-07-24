@@ -46,4 +46,8 @@ public class RobotMood
 	[SerializeField]
 	private int m_squareAddValue = 0;
 	public int SquareAddValue => m_squareAddValue;
+
+	[SerializeField]
+	private List<String> m_descriptions = null;
+	public List<string> Descriptions => m_descriptions;
 }
