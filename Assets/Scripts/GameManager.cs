@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -23,9 +24,6 @@ public class GameManager : MonoBehaviour
 	private Text m_deckDescription = null;
 
 	[SerializeField]
-	private Text m_handDescription = null;
-
-	[SerializeField]
 	private Text m_discardDescription = null;
 
 	[SerializeField]
@@ -43,6 +41,9 @@ public class GameManager : MonoBehaviour
 	[SerializeField]
 	private MoodsDisplay m_moodDisplay = null;
 
+	[SerializeField]
+	private CompleteOverlay m_completeOverlay = null;
+
 	[Space]
 	[SerializeField]
 	private List<int> m_initialDeckDefinition = null;
@@ -57,6 +58,8 @@ public class GameManager : MonoBehaviour
 
 	private RobotDefinition m_currentRobot = null;
 
+	private int m_currentRobotIndex = 0;
+
 	//========================================
 
 	private void Awake()
@@ -67,7 +70,7 @@ public class GameManager : MonoBehaviour
 	private void Start()
 	{
 		m_currentDeckDefinition = m_initialDeckDefinition;
-		m_currentRobot = m_robotDefinitions.Definitions[0];
+		m_currentRobot = m_robotDefinitions.Definitions[m_currentRobotIndex];
 
 		m_deck = new Deck(m_currentDeckDefinition);
 		m_deck.Shuffle();
@@ -75,6 +78,8 @@ public class GameManager : MonoBehaviour
 		m_discardPile = new DiscardPile();
 		m_sparkBar.Init();
 
+		m_completeOverlay.OnSuccess += GoToNextRobot;
+		m_completeOverlay.OnFailure += Fail;
 
 		RefillHand();
 	}
@@ -89,7 +94,6 @@ public class GameManager : MonoBehaviour
 	public void Refresh()
 	{
 		m_deckDescription.text = string.Format("Deck Cards: {0}", m_deck.PrintIDs());
-		m_handDescription.text = string.Format("Hand Size: {0}", m_hand.Count.ToString());
 		m_discardDescription.text = string.Format("Discarded Cards: {0}", m_discardPile.PrintIDs());
 
 		m_cardObj1.Init(m_hand[0]);
@@ -97,6 +101,11 @@ public class GameManager : MonoBehaviour
 		m_cardObj3.Init(m_hand[2]);
 
 		m_moodDisplay.SetMood(m_currentRobot.CurrentMood);
+
+		if (m_hand[0] == null && m_hand[1] == null && m_hand[2] == null)
+		{
+			m_completeOverlay.Show(m_sparkBar.Currentlevel);
+		}
 	}
 
 	public void SubmitCard(int cardId)
@@ -180,6 +189,28 @@ public class GameManager : MonoBehaviour
 		}
 
 		m_sparkBar.SetLevel(newLevel);
+	}
+
+	private void GoToNextRobot()
+	{
+		if (m_currentRobotIndex == m_robotDefinitions.Definitions.Count - 1)
+			Fail();
+
+		m_currentRobot = m_robotDefinitions.Definitions[++m_currentRobotIndex];
+
+		m_deck = new Deck(m_currentDeckDefinition);
+		m_deck.Shuffle();
+		m_hand = new List<Card>();
+		m_discardPile = new DiscardPile();
+		m_sparkBar.Init();
+
+		RefillHand();
+		Refresh();
+	}
+
+	private void Fail()
+	{
+		SceneManager.LoadScene("MenuScene");
 	}
 
 	private string PrintHandIDs()
